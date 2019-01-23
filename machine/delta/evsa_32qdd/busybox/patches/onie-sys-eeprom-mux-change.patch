@@ -1,0 +1,20 @@
+diff --git a/miscutils/sys_eeprom.c b/miscutils/sys_eeprom.c
+index e34abf5..ec6eac7 100644
+--- a/miscutils/sys_eeprom.c
++++ b/miscutils/sys_eeprom.c
+@@ -93,6 +93,7 @@
+     }
+     tokens[tlv_code_count*2] = NULL;
+ 
++    system("i2cset -y 0 0x31 0x14 0xfc");
+     eeprom_write_protect(DISENABLE_MODE);
+ 
+     while (TRUE) {
+@@ -202,6 +203,7 @@
+ 	free(tokens[(i*2) + 1]);
+     }
+     eeprom_write_protect(ENABLE_MODE);
++    system("i2cset -y 0 0x31 0x14 0xfc");
+     return  (err == 0) ? 0 : 1;
+ }
+ 
