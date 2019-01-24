@@ -6,34 +6,34 @@ Cross-Compiling ONIE
 ====================
 
 To compile ONIE first change directories to ``build-config`` and then
-type ``"make MACHINEROOT=../machine/delta MACHINE=evsa_32qdd all"``.
+type ``"make MACHINEROOT=../machine/delta MACHINE=delta_evsa-32qdd all"``.
 For example::
 
   $ cd build-config
-  $ make -j4 MACHINEROOT=../machine/delta MACHINE=evsa_32qdd all
+  $ make -j4 MACHINEROOT=../machine/delta MACHINE=delta_evsa-32qdd all
 
 When complete, the ONIE binaries are located in
 ``build/images``::
 
-  -rw-r--r--  5527024 Mar 27 11:01 evsa_32qdd-r0.initrd
-  -rw-r--r--  3360144 Mar 27 11:00 evsa_32qdd-r0.vmlinuz
-  -rw-r--r-- 22981120 Mar 27 11:01 onie-recovery-x86_64-evsa_32qdd-r0.efi64.pxe
-  -rw-r--r-- 20381696 Mar 27 11:01 onie-recovery-x86_64-evsa_32qdd-r0.iso
-  -rw-r--r--  8941431 Mar 27 11:01 onie-updater-x86_64-evsa_32qdd-r0
+  -rw-r--r--  5527024 Mar 27 11:01 delta_evsa-32qdd-r0.initrd
+  -rw-r--r--  3360144 Mar 27 11:00 delta_evsa-32qdd-r0.vmlinuz
+  -rw-r--r-- 22981120 Mar 27 11:01 onie-recovery-x86_64-delta_evsa-32qdd-r0.efi64.pxe
+  -rw-r--r-- 20381696 Mar 27 11:01 onie-recovery-x86_64-delta_evsa-32qdd-r0.iso
+  -rw-r--r--  8941431 Mar 27 11:01 onie-updater-x86_64-delta_evsa-32qdd-r0
 
 Cross-Compiling the DEMO OS
 ===========================
 
 To compile the demo OS first change directories to ``build-config``
-and then type ``"make -j12 MACHINEROOT=../machine/delta MACHINE=evsa_32qdd demo"``.
+and then type ``"make -j12 MACHINEROOT=../machine/delta MACHINE=delta_evsa-32qdd demo"``.
 For example::
 
   $ cd build-config
-  $ make -j12 MACHINEROOT=../machine/delta MACHINE=evsa_32qdd demo
+  $ make -j12 MACHINEROOT=../machine/delta MACHINE=delta_evsa-32qdd demo
 
 When complete, the demo OS installer is located in ``build/images``::
 
-  -rw-r--r-- 10486945 Mar 27 13:30 demo-installer-x86_64-evsa_32qdd-r0.bin
+  -rw-r--r-- 10486945 Mar 27 13:30 demo-installer-x86_64-delta_evsa-32qdd-r0.bin
 
 Installing ONIE on a Blank Machine
 ==================================
